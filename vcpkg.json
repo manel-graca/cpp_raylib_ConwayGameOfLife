@@ -1,0 +1,8 @@
+{
+    "name": "cpp-rlib-conwaygameoflife",
+    "description": "cpp-rlib-conwaygameoflife",
+    "license": "MIT",
+    "dependencies": [
+        "raylib"
+    ]
+}
