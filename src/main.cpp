@@ -4,10 +4,10 @@
 int main()
 {
     Color GREY = {29, 29, 29, 255};
-    const int WINDOW_WIDTH = 1200;
-    const int WINDOW_HEIGHT = 900;
-    const int CELL_SIZE = 6;
-    int FPS = 12;
+    const int WINDOW_WIDTH = 750;
+    const int WINDOW_HEIGHT = 750;
+    const int CELL_SIZE = 25;
+    int FPS = 16;
 
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Conway Game of Life");
     SetTargetFPS(FPS);
@@ -50,6 +50,11 @@ int main()
         ClearBackground(GREY);
 
         simulation.Draw();
+
+        if (!simulation.IsRunning())
+        {
+            DrawText("Paused", 10, 10, 30, WHITE);
+        }
 
         EndDrawing();
     }
